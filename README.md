@@ -9,4 +9,4 @@ Need Ionic and Angular installed
 
 On terminal:
 
-relative to main directory, run 'npm install' to install dependencies
+relative to 'sleeptracker; directory, run 'npm install' to install dependencies
