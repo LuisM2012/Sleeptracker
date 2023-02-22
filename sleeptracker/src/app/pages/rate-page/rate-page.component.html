@@ -1,0 +1,20 @@
+<ion-content class="ion-padding-top">
+  <ion-list class="ion-padding-top">
+    <ion-radio-group *ngFor="let rate of rating" [(ngModel)]="score">
+      <ion-item>
+        <ion-radio mode="ios" slot="end" value="{{rate.score}}"></ion-radio>
+        <ion-label class="ion-text-wrap">{{rate.description}}</ion-label>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+  <div class="ion-margin">
+    <ion-label>Notes:</ion-label>
+    <ion-textarea placeholder="Type Notes Here" [(ngModel)]="notes" [autoGrow]="true"></ion-textarea>
+  </div>
+  <div class="ion-text-center">
+    <ion-button (click)="addRate()" class="ion-margin-top">Continue</ion-button>
+  </div>
+  <div class="ion-text-center">
+    <ion-button routerLink="/daily" fill="clear" color="danger">Cancel</ion-button>
+  </div>
+</ion-content>

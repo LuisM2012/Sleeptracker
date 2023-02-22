@@ -1,0 +1,15 @@
+<ion-content class="ion-padding-top ion-text-left">
+  <h3 class="ion-margin">Daily Log</h3>
+  <ion-list>
+    <div class="ion-text-center" *ngIf="!dailyLog.logs.length">
+      <ion-label>Empty</ion-label>
+    </div>
+    <ion-card *ngFor="let log of getSorted()">
+      <ion-card-content>
+        <p>Score: {{log.loggedValue}}</p>
+        <ion-label>{{log.note}}</ion-label>
+      </ion-card-content>
+      <ion-card-header class="ion-text-right">{{getTime(log)}}</ion-card-header>
+    </ion-card>
+  </ion-list>
+</ion-content>

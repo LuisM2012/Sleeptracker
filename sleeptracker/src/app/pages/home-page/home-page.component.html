@@ -1,0 +1,16 @@
+<ion-content class="ion-padding-top
+                    ion-text-center">
+  <div class="ion-padding">
+    <ion-label>Average Sleepiness Today</ion-label>
+    <h2>{{ estAverage() }}</h2>
+    <ion-label>Last Overnight Sleep</ion-label>
+    <h2>{{ overnightLog.totalHours }} hrs</h2>
+  </div>
+  <br>
+  <div class="ion-padding-bottom">
+    <ion-button routerLink="/time" color="tertiary">Log Sleep</ion-button>
+  </div>
+  <div class="ion-padding">
+    <ion-button [routerLink]="['/daily']" color="tertiary">Daily Log</ion-button>
+  </div>
+</ion-content>

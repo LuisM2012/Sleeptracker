@@ -1,0 +1,15 @@
+<ion-content class="ion-padding-top">
+  <ion-list [inset]="true" lines="none">
+    <div *ngIf="!logs.length" class="ion-text-center">
+      <ion-label>Empty History</ion-label>
+    </div>
+    <ion-card *ngFor="let log of getSorted()">
+      <ion-card-header>
+        <ion-card-subtitle>{{ logDate(log) }}</ion-card-subtitle>
+        <ion-card-title>{{ logTitle(log) }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>{{ logData(log) }}</ion-card-content>
+      <ion-button *ngIf="logIsDaily(log)" fill="clear" expand="full" (click)="getLog(log)">See Log</ion-button>
+    </ion-card>
+  </ion-list>
+</ion-content>

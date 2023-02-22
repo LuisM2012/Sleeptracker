@@ -1,0 +1,17 @@
+<ion-content class="ion-padding-top
+                    ion-text-center">
+  <h2>Start Time</h2>
+  <ion-row class="ion-justify-content-center ion-padding-bottom">
+    <ion-datetime presentation="time" [(ngModel)]="start"></ion-datetime>
+  </ion-row>
+  <h2>End Time</h2>
+  <ion-row class="ion-justify-content-center ion-padding-bottom">
+    <ion-datetime presentation="time" [(ngModel)]="end"></ion-datetime>
+  </ion-row>
+  <div>
+    <ion-button (click)="addTime()">Continue</ion-button>
+  </div>
+  <div>
+    <ion-button routerLink="/home" fill="clear" color="danger">Cancel</ion-button>
+  </div>
+</ion-content>
