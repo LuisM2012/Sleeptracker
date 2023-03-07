@@ -10,3 +10,6 @@ Need Ionic and Angular installed
 On terminal:
 
 relative to 'sleeptracker; directory, run 'npm install' to install dependencies
+
+### Current Views
+![alt text](./DailyLogPage.png)
